@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Latest Vitals</title>
+  </head>
+  <body>
+    <h1>Latest Vitals:</h1>
+    {% if latest_vitals_list %}
+    <ul>
+        {% for vitals_entry in latest_vitals_list %}
+        <li>{{ vitals_entry }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No vitals entries are available.</p>
+{% endif %}
+  </body>
+</html>
+
